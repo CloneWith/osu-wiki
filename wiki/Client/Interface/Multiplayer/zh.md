@@ -2,13 +2,13 @@
 needs_cleanup: true
 ---
 
-<!-- TODO: needs further rewrite, see https://github.com/ppy/osu-wiki/issues/7165 -->
+<!-- TODO: 仍需进一步重写：https://github.com/ppy/osu-wiki/issues/7165 -->
 
 # 多人游戏
 
 **多人游戏** （**Multiplayer**，有时简写为 *Multi*）是一个游戏模式，最多允许 16 位玩家参加，他们可以单独或组队对抗，也可以一起合作游玩，游玩的谱面由房主决定。
 
-[osu! 学院](/wiki/Community/Video_series/osu!academy)的[第 6 集](https://www.youtube.com/watch?v=QPTLyG7O8ak)视频中包括了这部分内容，除此之外还介绍了[online users panel](/wiki/Client/Interface/Chat_console#扩展聊天面板)的相关内容。
+[osu! 学院](/wiki/Community/Video_series/osu!academy)的[第 6 集 (YouTube)](https://www.youtube.com/watch?v=QPTLyG7O8ak) 视频中包括了这部分内容，除此之外还介绍了[在线用户面板](/wiki/Client/Interface/Chat_console#扩展聊天面板)的相关内容。
 
 ## 游玩方法
 
@@ -76,36 +76,36 @@ needs_cleanup: true
 | 名称 | 描述 |
 | :-: | :-- |
 | `Game Name（房间名称）` | 比赛房间名称，默认值是 `{账户名}'s game`。 |
-| `Require password to join（加入时需要密码）` | Make the match private. |
-| `Password（密码）` | Set a password for the match. Only appears if the `Require password to join` button is enabled. |
-| `Make match history publicly viewable（比赛记录公开可见）` | Allow players other than match participants to view the match history via direct link. Only appears if the `Require password to join` button is enabled. |
-| `Max Players（最大玩家数）` | The total number of players (including the host) allowed to join the match. A range from 2 to 16 can be selected, with a default of 8. This can be adjusted later by locking/unlocking player slots. |
+| `Require password to join（加入时需要密码）` | 创建私密房间。 |
+| `Password（密码）` | 设置房间密码，仅在启用 `Require password to join（加入时需要密码）` 时出现。 |
+| `Make match history publicly viewable（比赛记录公开可见）` | 让未参加比赛的玩家可以通过直链浏览比赛历史。仅在启用 `Require password to join（加入时需要密码）` 时出现。 |
+| `Max Players（最大玩家数）` | 允许进入房间的玩家总数（包括房主）。A range from 2 to 16 can be selected, with a default of 8. This can be adjusted later by locking/unlocking player slots. |
 
 Pressing the `1. Start Game` button will create the match with the currently playing song as the beatmap. The `2. Cancel` button brings the player back to the lobby.
 
-## 比赛设置
+## 比赛配置页
 
 ::: Infobox
 ![](img/multi-room.jpg "玩家视角下的比赛房间")
 :::
 
-After going into or creating a match, the match setup will be displayed. The following sections will focus on the different parts of the screen starting from top to bottom and going left to right.
+在创建或进入比赛房间后，会显示比赛配置页。本文下面几节会按从上到下、从左到右的顺序，着重说明此页面的不同部分。
 
-While there is no direct button for it, the [options menu](/wiki/Client/Options) can still be accessed by pressing `Ctrl` + `O` while in a match lobby.
+在比赛房间里没有可以直接打开[设置菜单](/wiki/Client/Options)的按钮，但仍然可以按 `Ctrl` + `O` 打开它。
 
-### Header section
+### 头栏
 
-![](img/multi-match-header.jpg "Example of the header")
+![](img/multi-match-header.jpg "头栏例图")
 
-The top-left text indicates whether the player is the match host or a normal player. In the middle, there is a player box with information about [performance points](/wiki/Performance_points/Total_performance_points), [overall accuracy](/wiki/Gameplay/Accuracy), [level](/wiki/Gameplay/Score/Total_score#level), [rank](/wiki/Ranking#performance-points-ranking) and the selected [game mode](/wiki/Game_mode). To the right is a button for pausing the currently playing song.
+头栏左上角的文字会指出玩家的身份（房主或普通玩家）；中间部分有个玩家框，显示与[表现分](/wiki/Performance_points/Total_performance_points)、[整体准确率](/wiki/Gameplay/Accuracy)、[等级](/wiki/Gameplay/Score/Total_score#level)、[排名](/wiki/Ranking#performance-points-ranking)以及所选[游戏模式](/wiki/Game_mode)相关的信息；右侧还有一个按钮，用来暂停目前正在播放的歌曲。
 
 ### 当前玩家列表
 
 ::: Infobox
-![](img/multi-match-current-players-list.jpg "Example of the player list in a match lobby")
+![](img/multi-match-current-players-list.jpg "房间中的玩家列表例图")
 :::
 
-The player list shows all slots for a match. The numbers in parentheses to the right of `Current Players` show the number of players in the match over the amount of unlocked player slots.
+玩家列表会显示房间的所有槽位。The numbers in parentheses to the right of `Current Players` show the number of players in the match over the amount of unlocked player slots.
 
 Available slots can be moved between by clicking on them, but slots indicated with a closed lock are not accessible. The host is able to lock and unlock slots through the icons on the left, as well as kick players. Host privileges can be transferred to another player by right-clicking and pressing `Transfer host privileges`. The team colour can be changed between blue and red when playing Team VS.
 
@@ -122,7 +122,7 @@ A player can have four different colours in this list, which also mean different
 
 ### 比赛设置
 
-![](img/multi-match-settings.jpg "The match settings, where the host can change the lobby name, beatmap, team mode, etc")
+![](img/multi-match-settings.jpg "比赛设置页面，房主可以修改房间名称、谱面、组队模式等等")
 
 #### 比赛名称与密码
 
@@ -213,16 +213,16 @@ There are four different ways the winner of a match can be decided:
 
 [聊天面板](/wiki/Client/Interface/Chat_console)上方有两个大按钮，分别是橙色和蓝色的。
 
-The orange `离开房间` button on the left is self-explanatory. If the match host leave the match, the host will be automatically transferred to the remaining player in slot order. If there is no one in the match, it will automatically close, except for ones made by [`!mp` commands](/wiki/osu!_tournament_client/osu!tourney/Tournament_management_commands), which will instead close after 30 minutes.
+左边的橙色 `离开房间` 按钮的作用不言自明。当房主离开房间时，房主资格会按槽位自动转移给剩余玩家。房间里没有玩家时会自动关闭，但由 [`!mp` 命令](/wiki/osu!_tournament_client/osu!tourney/Tournament_management_commands)建立的房间除外，这类房间会在 30 分钟后关闭。
 
-The blue button is used to control the player ready state and to start the match.
+蓝色按钮用于控制玩家的准备状态，也可以使比赛开始。
 
 | 名称 | 描述 |
 | :-: | :-- |
-| `准备！` | 将玩家标记为已准备好（在玩家列表中显示为绿色）。The button will change to `取消准备`. For the match host, it will change to either `开始游戏！` or `强制开始游戏！` if there are players in the lobby. |
-| `取消准备` | Marks the player as not ready (white on the player list). The button will change to `准备！` |
-| `开始游戏！` | Starts the match. This button only appears for the match host when all players are ready. |
-| `强制开始游戏！({准备好玩家数}/{总玩家数})` | Starts the match even if not all players are ready. This button only appears for the match host when some players are ready. The amount of ready players compared to the total amount of players is shown in parentheses. |
+| `准备！` | 将玩家标记为已准备好（在玩家列表中显示为绿色），此后按钮会变为 `取消准备`。对房主来说，则会变为 `开始游戏！` 或是 `强制开始游戏！`（房间里有其他玩家时）。 |
+| `取消准备` | 将玩家标记为未准备好（在玩家列表中显示为白色），此后按钮会变为 `准备！`。 |
+| `开始游戏！` | 开始比赛。此按钮仅房主可见，且在所有玩家都准备好时才会显示。 |
+| `强制开始游戏！({准备好玩家数}/{总玩家数})` | 即使有玩家未准备好也开始比赛。此按钮仅房主可见，且在部分玩家准备好时才会显示。括号里会显示已准备好的玩家数与总玩家数比较值。 |
 
 ### 比赛历史
 
@@ -230,9 +230,9 @@ The blue button is used to control the player ready state and to start the match
 ![](img/multi-mh.jpg "网页上的比赛历史页面")
 :::
 
-The bottom section of the screen is the [chat console](/wiki/Client/Interface/Chat_console). Every match has its own channel in a tab called `#multiplayer`, with [BanchoBot](/wiki/BanchoBot) providing a link to the match history on the first line.
+屏幕底部是[聊天面板](/wiki/Client/Interface/Chat_console)。每个比赛房间都有单独的聊天频道，显示在 `#multiplayer` 标签页中。[BanchoBot](/wiki/BanchoBot) 会在此频道发送第一条消息，给出比赛历史的链接。
 
-For Head-to-head matches, the result will be displayed privately in another tab called `#userlog` upon conclusion, where BanchoBot says `你在 {总人数} 人的多人游戏中排名第 {名次} 位（{谱面} [难度] <游戏模式>）。`
+对局比赛结束后，结果会在 `#userlog` 标签页中由 BanchoBot 单独发给玩家：`你在 {总人数} 人的多人游戏中排名第 {名次} 位（{谱面} [难度] <游戏模式>）。`
 
 ## 游玩时
 
@@ -240,7 +240,7 @@ For Head-to-head matches, the result will be displayed privately in another tab 
 
 #### 离开比赛
 
-There is no way to pause a multiplayer match. Pressing `Esc` will give a warning in the lower-right corner, and pressing it again will quit the match.
+无法暂停多人游戏。按下 `Esc` 键后会在右下角给出警告，再按一次则会退出比赛房间。
 
 #### 视觉设置
 
@@ -341,9 +341,9 @@ Changing teams can be done while in the lobby. There is no handicap for teams wi
 ![](img/multi-teamvs-results.jpg "Team VS 模式结算屏幕")
 :::
 
-The winning team is announced at the top of the results screen.
+结算屏幕顶部会公布获胜队伍。
 
-Only players who are alive by the end of the match count towards their teams' totals.<!-- TODO: clarify which statistics this is about -->
+只有截至比赛结束时仍然存活的玩家才会计入所在队伍。<!-- TODO: 澄清相关统计数据 -->
 
 The panels to the sides show results for each player in different tabs. The `Total` tab shows the total count of [judgements](/wiki/Gameplay/Judgement) for both teams and their average accuracy.
 
