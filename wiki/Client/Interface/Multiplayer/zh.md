@@ -79,9 +79,9 @@ needs_cleanup: true
 | `Require password to join（加入时需要密码）` | 创建私密房间。 |
 | `Password（密码）` | 设置房间密码，仅在启用 `Require password to join（加入时需要密码）` 时出现。 |
 | `Make match history publicly viewable（比赛记录公开可见）` | 让未参加比赛的玩家可以通过直链浏览比赛历史。仅在启用 `Require password to join（加入时需要密码）` 时出现。 |
-| `Max Players（最大玩家数）` | 允许进入房间的玩家总数（包括房主）。A range from 2 to 16 can be selected, with a default of 8. This can be adjusted later by locking/unlocking player slots. |
+| `Max Players（最大玩家数）` | 允许进入房间的玩家总数（包括房主），范围在 2 到 16 之间，默认值是 8。建立房间后可以通过锁定、解锁槽位来调整。 |
 
-Pressing the `1. Start Game` button will create the match with the currently playing song as the beatmap. The `2. Cancel` button brings the player back to the lobby.
+按下 `1. Start Game（开始游戏）` 按钮会建立比赛房间，将正在播放的歌曲谱面用作房间谱面。`2. Cancel（取消）` 按钮会将玩家带回到大厅。
 
 ## 比赛配置页
 
@@ -89,7 +89,7 @@ Pressing the `1. Start Game` button will create the match with the currently pla
 ![](img/multi-room.jpg "玩家视角下的比赛房间")
 :::
 
-在创建或进入比赛房间后，会显示比赛配置页。本文下面几节会按从上到下、从左到右的顺序，着重说明此页面的不同部分。
+在创建或进入比赛房间后，会显示比赛配置页。本文下面几节会按从上到下、从左到右的顺序，着重讲解此页面的不同部分。
 
 在比赛房间里没有可以直接打开[设置菜单](/wiki/Client/Options)的按钮，但仍然可以按 `Ctrl` + `O` 打开它。
 
@@ -105,20 +105,20 @@ Pressing the `1. Start Game` button will create the match with the currently pla
 ![](img/multi-match-current-players-list.jpg "房间中的玩家列表例图")
 :::
 
-玩家列表会显示房间的所有槽位。The numbers in parentheses to the right of `Current Players` show the number of players in the match over the amount of unlocked player slots.
+玩家列表会显示房间的所有槽位。`当前玩家` 右侧的括号中会显示房间里的玩家数与已解锁槽位总数。
 
-Available slots can be moved between by clicking on them, but slots indicated with a closed lock are not accessible. The host is able to lock and unlock slots through the icons on the left, as well as kick players. Host privileges can be transferred to another player by right-clicking and pressing `Transfer host privileges`. The team colour can be changed between blue and red when playing Team VS.
+点击可用槽位即可进行移动，但无法移动到带有上锁图标的槽位。房主可以通过点击槽位左侧的图标将其上锁、解锁，也可以踢走槽位中的玩家。如果要转移房主权限，可以右击目标玩家，然后按下 `将房主交给此玩家` 按钮。在 Team VS 模式中可以将队伍颜色改为蓝色或红色。
 
-Hovering above any player on the list will show the level, country and [overall accuracy](/wiki/Gameplay/Accuracy) of the player in question.
+光标悬停在表中玩家上时，会显示对应玩家的等级、国家或地区及[整体准确率](/wiki/Gameplay/Accuracy)。
 
-A player can have four different colours in this list, which also mean different things:
+列表中的玩家栏可以有四种不同颜色，各有不同含义：
 
 | 颜色 | 描述 |
 | :-: | :-- |
-| **红色（没有地图）** | The player does not have the beatmap, indicated by a `[no map]` notice until they have downloaded the beatmap. |
-| **白色（未准备好）** | The player has the beatmap but is not ready yet. [Game modifiers](/wiki/Gameplay/Game_modifier) can be changed in this state. |
-| **绿色（已准备好）** | The player is ready. Game modifiers cannot be changed in this state. The host will be able to start the game after readying, and any ready players will begin the match. |
-| **浅蓝色（游玩中）** | The player is playing, indicated by a `[playing]` notice until the match ends. |
+| **红色（没有地图）** | 玩家没有谱面，在下载好谱面前都会显示 `[没有地图]` 通知。 |
+| **白色（未准备好）** | 玩家拥有此谱面但还没准备好。在此状态下可以更改[游戏模组](/wiki/Gameplay/Game_modifier)选择。 |
+| **绿色（已准备好）** | 玩家已准备好，此时不能更改模组选择。在有玩家准备好后，房主就可以开始比赛，所有已准备好的玩家都会开始游玩。 |
+| **浅蓝色（游玩中）** | 玩家正在游玩，在比赛结束前都会显示 `[游玩中]` 通知。 |
 
 ### 比赛设置
 
@@ -126,7 +126,7 @@ A player can have four different colours in this list, which also mean different
 
 #### 比赛名称与密码
 
-The `Game Name` is the name of the lobby that is visible in match listings in-game and on the website. Having a password is useful for restricting the lobby to friends or tournament players, and can be changed using the `Change Password` button above the game name.
+`Game Name` 指的是房间名称，在游戏内的房间列表与网页上都可见。给房间设置密码有助于将房间限制于好友或锦标赛玩家访问。可以使用比赛名称上方的 `更改密码` 按钮修改密码。
 
 #### 谱面
 
@@ -138,15 +138,15 @@ The `Game Name` is the name of the lobby that is visible in match listings in-ga
 ![](img/multi-beatmap-change-zh.jpg "在多人游戏中选择谱面时的选歌界面")
 :::
 
-The beatmap section shows the beatmap to be played in the match. Changing the beatmap using the button above it opens the song selection screen.
+谱面区会显示比赛房间将要游玩的谱面。点击谱面卡片会打开选歌页面，用于切换谱面。
 
-The beatmap card will show the background image, game mode icon, 名称 and artist of the song, creator of the beatmap, the selected [difficulty](/wiki/Beatmap/Difficulty), and the [star rating](/wiki/Beatmap/Star_rating) for the selected beatmap.
+谱面卡片会展示所选谱面的背景图片、游戏模式图标、歌曲的标题与艺术家、制图者、选中的[难度](/wiki/Beatmap/Difficulty)与[星数评价](/wiki/Beatmap/Star_rating)。
 
 ::: Infobox
-![](img/multi-beatmap-info.jpg "Hovering over the beatmap card")
+![](img/multi-beatmap-info.jpg "悬停在谱面卡片上方")
 :::
 
-When hovering over the beatmap, there is a popup that displays information about the beatmap. These are as follows:
+光标悬停在谱面上时，会出现一个弹出框，显示谱面相关信息，如下所示：
 
 | 值 | 描述 |
 | :-: | :-- |
@@ -163,23 +163,23 @@ When hovering over the beatmap, there is a popup that displays information about
 
 | 谱面状态 | 描述 |
 | :-: | :-- |
-| `Ranked` / `Approved` / `Pending` / `Graveyard` | The [beatmap category](/wiki/Beatmap/Category). Clicking on the beatmap card will open the beatmap page on the website, where it can be [downloaded](/wiki/Beatmap#downloading-beatmaps). |
-| `Not uploaded or not up-to-date` | The beatmap is not available for download. The host should find the link (in the [beatmap listing](https://osu.ppy.sh/beatmapsets)) for the player if the issue persists. |
-| `Cannot update the beatmap` | The host is playing a modified version of the beatmap. |
+| `Ranked` / `Approved` / `Pending` / `Graveyard` | [谱面类别](/wiki/Beatmap/Category)。点击谱面卡片后会打开谱面信息页，可以在这里[下载](/wiki/Beatmap#下载谱面)它。 |
+| `Not uploaded or not up-to-date（未上传或非最新）` | 无法下载此谱面。如果问题仍然存在，房主应该帮玩家找到（[谱面列表](https://osu.ppy.sh/beatmapsets)中的）链接。 |
+| `Cannot update the beatmap（无法更新谱面）` | 房主选择了已经修改的谱面。 |
 
 #### 模组
 
 ::: Infobox
-![](img/multi-player-free-mods-zh.jpg "The multiplayer mod selection screen, where the host has enabled Free Mods")
+![](img/multi-player-free-mods-zh.jpg "多人游戏的模组选择页面，此时房主已启用 Free ods")
 :::
 
-This section will show the [game mods](/wiki/Gameplay/Game_modifier) used for this match.
+此区域显示比赛使用的[游戏模组](/wiki/Gameplay/Game_modifier)。
 
-The host can enable `Free Mods` to allow players to freely choose any mod combination, except ones that change gameplay speed ([Double Time (DT)](/wiki/Gameplay/Game_modifier/Double_Time), [Nightcore (NC)](/wiki/Gameplay/Game_modifier/Nightcore) and [Half Time (HT)](/wiki/Gameplay/Game_modifier/Half_Time)).
+房主可以启用 `Free Mods（允许自由选择 Mod）`，让玩家自由选择模组，但改变游玩速度的模组（[Double Time (DT)](/wiki/Gameplay/Game_modifier/Double_Time)、[Nightcore (NC)](/wiki/Gameplay/Game_modifier/Nightcore) 和 [Half Time (HT)](/wiki/Gameplay/Game_modifier/Half_Time)）除外。
 
 #### 组队模式 {id=team-mode-match-setup}
 
-*For more information about team modes, see the [gameplay section on team modes](#team-mode-gameplay).*
+*对于关于组队模式的更多信息，参见[组队模式游玩小节](#team-mode-gameplay).*
 
 可以使用以下四种组队模式进行比赛：
 
@@ -188,26 +188,26 @@ The host can enable `Free Mods` to allow players to freely choose any mod combin
 | `Head-to-head` | 相互比拼，竞争榜首。 |
 | `Team VS` | 组队（红队和蓝队）比拼，获得胜利。 |
 | `Tag co-op` （仅限 osu! 模式，不计入排名） | 一起完成谱面，一次打一串连击。 |
-| `Tag-team VS` （仅限 osu! 模式，不计入排名） | The same as `Tag co-op`, but with two teams competing against each other. |
+| `Tag-team VS` （仅限 osu! 模式，不计入排名） | 与 `Tag co-op` 相同，但是有两支队伍相互对立。 |
 
 ##### Tag 颜色
 
 ::: Infobox
-![](img/multi-tag-colours.jpg "Available colours for the player's turn combo colour")
+![](img/multi-tag-colours.jpg "玩家负责连击组的可用颜色")
 :::
 
-If the team mode was set to `Tag co-op` or `Tag-team VS`, a `Tag Colour: (combo colour)` section will be shown which allows choosing a custom colour for each player. Setting this to `Default` will use the beatmap's original combo colours.
+如果组队模式是 `Tag co-op` 或 `Tag-team VS`，则会显示 `Tag Colour（Tag 颜色）: (combo colour)` 小节，让每位玩家可以选择自定义颜色。如果颜色设置为 `Default（默认）`，则会使用谱面原有的连击组颜色。
 
 #### 获胜条件
 
-There are four different ways the winner of a match can be decided:
+有四种不同方式决定比赛的获胜方：
 
 | 名称 | 描述 |
 | :-: | :-- |
-| `Score` | The player with the highest score wins. |
-| `Accuracy` | The player with the highest accuracy wins. If there are two players with 100.00%, the player with the highest score (from spinners) wins. Otherwise, it is a tie. |
-| `Combo` | The player with the highest combo count *at the end of the beatmap* wins. If the combo count is the same, the player with the highest score wins. The maximum combo is not counted in this case. |
-| `Score v2` | The player with the highest (standardised) score wins. |
+| `Score（分数）` | 分数最高的玩家获胜。 |
+| `Accuracy（准确率）` | 准确率最高的玩家获胜。如果准确率为 100.00% 的玩家不止一位，则（转盘获得）分数最高的玩家获胜，否则算作平局。 |
+| `Combo（连击数）` | *在谱面结束时*连击数最高的玩家获胜。如果连击数相同，则分数最高的玩家获胜。此条件下不考虑最高连击数。 |
+| `Score v2` | （标准化）分数最高的玩家获胜。 |
 
 ### 比赛设置按钮
 
@@ -244,17 +244,17 @@ There are four different ways the winner of a match can be decided:
 
 #### 视觉设置
 
-While the match is starting, moving the cursor to the bottom of the screen will open the visual settings panel. See the [Visual settings](/wiki/Client/Interface/Visual_settings) page for more information.
+在比赛将开始时，将光标移动到屏幕底端会打开视觉设置面板。对于更多信息，参见[视觉设置](/wiki/Client/Interface/Visual_settings)页面。
 
 #### 血量
 
-When a player's health bar has been depleted completely, they can still continue playing, but the score will be considered as failed and will not appear on leaderboards. The player can be revived if they reach full health again, unless they use [Sudden Death (SD)](/wiki/Gameplay/Game_modifier/Sudden_Death).
+当玩家的血条完全清空时，玩家仍然可以继续游玩，但会被视作失败，其分数不会出现在排行榜上。在没有使用 [Sudden Death (SD)](/wiki/Gameplay/Game_modifier/Sudden_Death) 游戏模组的情况下，玩家在血条回满时就会复活。
 
-In Team VS matches, being in the failed state at the end of the match will make the score not contribute to the team score. If all players of a team have failed, the match immediately ends and the opposite team wins by default.
+在 Team VS 模式中，比赛结束时处于失败状态的玩家，其分数不会计入所在队伍总分。如果队伍中的所有玩家都失败了，比赛就会立刻结束，默认另一队获胜。
 
 #### 结果
 
-Despite there being no [extended results screen](/wiki/Client/Interface#extended-results-screen) below the results screen like when playing solo, scores set during multiplayer matches (with the exception of `Tag co-op` and `Tag-team VS` matches) will still appear on online leaderboards if they are good enough. The result will not be shown on the local leaderboard.
+与单人游戏不同，多人游戏中的结算屏幕下方没有[在线排行榜](/wiki/Client/Interface#在线排行榜)，但如果比赛中获得的分数足够好，也会出现在在线排行榜上（`Tag co-op` 和 `Tag-team VS` 模式中的除外）。比赛结果不会在本地排行榜中显示。
 
 #### 保存回放
 
@@ -262,31 +262,31 @@ Despite there being no [extended results screen](/wiki/Client/Interface#extended
 
 #### 多人游戏排行榜
 
-The leaderboard to the side of the screen shows different live statistics for each player based on the match settings.
+取决于比赛设置，屏幕一侧的排行榜会实时显示每位玩家不同的统计数据。
 
-For `Head-to-head` and `Team VS` matches:
-
-| 获胜条件 | 显示的统计数据 |
-| :-- | :-- |
-| `Score` / `Score v2` | Individual score, combo multiplier, judgements |
-| `Accuracy` | Accuracy, individual score, combo multiplier, judgements |
-| `Combo` | Current combo counts |
-
-For `Tag co-op` and `Tag-team VS`:
+对于 `Head-to-head` 和 `Team VS` 模式的比赛：
 
 | 获胜条件 | 显示的统计数据 |
 | :-- | :-- |
-| `Score` / `Score v2` | Team score, individual score, judgements |
-| `Accuracy` | Team average accuracy, individual score, judgements |
-| `Combo` | Current combo count, individual score, judgements |
+| `Score` / `Score v2` | 玩家分数、连击数、判定 |
+| `Accuracy` | 准确率、玩家分数、连击数、判定 |
+| `Combo` | 当前连击数 |
 
-If a player fails during a Tag co-op match, the match ends and the players return to the match lobby. In Tag-team VS, the opposing team receives a win by default instead. Failed players do not contribute towards the team unless they have been revived by the end of the match.
+对于 `Tag co-op` 和 `Tag-team VS` 模式：
 
-If a player quits while being in a match, the game will perfectly play their part for them, but not contribute anything to the team. If all players of a team quit, the opposing team will win by default.
+| 获胜条件 | 显示的统计数据 |
+| :-- | :-- |
+| `Score` / `Score v2` | 队伍分数、玩家分数、判定 |
+| `Accuracy` | 队伍平均准确率、玩家分数、判定 |
+| `Combo` | 当前连击数、玩家分数、判定 |
 
-Players who have failed or quit will be placed at the bottom of the leaderboard with their scores sorted separately from other players.
+在 Tag co-op 模式中，如果有玩家失败，比赛就会结束，所有玩家回到比赛房间。在 Tag-team VS 模式中，默认另一支队伍获胜。除非在比赛结束时已复活，失败的玩家不会计入所属队伍。
 
-The colour of each player on the leaderboard while playing indicates the status of the player during the match.
+如果玩家在比赛中途退出，游戏则会完美游玩他们负责的部分，但不会计入所属队伍。如果一支队伍中的所有玩家都退出了，默认另一支队伍获胜。
+
+失败或已退出的玩家位于排行榜底部，其分数与其他玩家分开排列。
+
+游玩时，排行榜中玩家的背景颜色指示其状态。
 
 | 图例 | 状态 | 描述 |
 | :-: | :-: | :-- |
@@ -307,7 +307,7 @@ The colour of each player on the leaderboard while playing indicates the status 
 ![](img/multi-hth-interface.jpg "Head-to-head 模式界面")
 :::
 
-Head-to-head is a team mode where players duke it all out in a free-for-all match for the top spot on the leaderboard. This is the default team mode and does not have any special characteristics in gameplay, other than going for the top spot.
+Head-to-head 模式是多人游戏的默认组队模式，游玩过程没有特别之处，玩家可自由游玩，争夺榜首。
 
 ##### 结果
 
@@ -315,11 +315,11 @@ Head-to-head is a team mode where players duke it all out in a free-for-all matc
 ![](img/multi-hth-results.jpg "Head-to-head 模式结算屏幕")
 :::
 
-At the end of the match, the winner's avatar is shown in a big winner's box, along with the match leaderboard to the right
+在比赛结束时，获胜玩家的头像会显示在大框里，右侧则会显示比赛排行榜。
 
-The [grade](/wiki/Gameplay/Grade) for the play is placed behind the result like a watermark. Other players' results can be checked by clicking on their panel on the leaderboard.
+此次游玩的[等级](/wiki/Gameplay/Grade)会以水印的形式显示在结果下层。点击排行榜上其他玩家的区域可以查看其结果。
 
-Each player will receive their match result as a private message in the `#userlog` tab in [chat](/wiki/Client/Interface/Chat_console).
+每位玩家都会在[聊天](/wiki/Client/Interface/Chat_console)的 `#userlog` 标签页中收到比赛结果的私信。
 
 #### Team VS
 
@@ -329,11 +329,11 @@ Each player will receive their match result as a private message in the `#userlo
 ![](img/multi-teamvs-interface.jpg "Team VS 模式界面")
 :::
 
-Team VS pits two teams, Blue and Red, against each other.
+在 Team VS 模式中，蓝队、红队两支队伍对立竞争。
 
-Blue is on the left and Red is on the right. A crown at the centre moves left and right to show which team is currently winning.
+蓝队玩家列表位于屏幕左侧，红队位于右侧。屏幕中央有一个左右移动的皇冠，显示目前获胜的队伍。
 
-Changing teams can be done while in the lobby. There is no handicap for teams with fewer members, and it is entirely possible to start a match with only one team.
+在比赛房间内可以改变队伍。成员较少的队伍游玩时绝没有障碍，只组一支队伍开始比赛也是完全有可能的。
 
 ##### 结果 {id=team-vs-results-screen}
 
@@ -345,13 +345,13 @@ Changing teams can be done while in the lobby. There is no handicap for teams wi
 
 只有截至比赛结束时仍然存活的玩家才会计入所在队伍。<!-- TODO: 澄清相关统计数据 -->
 
-The panels to the sides show results for each player in different tabs. The `Total` tab shows the total count of [judgements](/wiki/Gameplay/Judgement) for both teams and their average accuracy.
+屏幕两侧的面板会将每位玩家的结果显示在不同的标签页中。`Total` 标签页显示两支队伍的[判定](/wiki/Gameplay/Judgement)总数及其平均准确率。
 
 #### Tag co-op / Tag-team VS
 
 ##### 界面
 
-*注意：This team mode is unranked and only available in osu! mode.*
+*注意：这个组队模式不计入排名，且仅在 osu! 模式中可用。*
 
 ::: Infobox
 ![](img/multi-coop-interface.jpg "Tag co-op 模式界面")
@@ -361,11 +361,11 @@ The panels to the sides show results for each player in different tabs. The `Tot
 ![](img/multi-tagteam-interface.jpg "Tag-team VS 模式界面")
 :::
 
-Tag co-op makes all players in the match work together to pass the beatmap, one combo at a time. `Tag-team VS` is just `Tag co-op` but with two teams playing against each other.
+在 Tag co-op 模式中，比赛中的所有玩家共同游玩谱面，每位玩家一次负责完成一个连击组。`Tag-team VS` 模式与 `Tag co-op` 大致相同，但是由两支队伍对战完成。
 
-In this mode, the players' slot placement in the lobby determines the order they play in.
+在这个模式中，玩家的游玩顺序由所在槽位位置决定。
 
-A green arrow will show the player who is currently playing, and their name will be shown at the lower right. Warning arrows indicate when it is about to be the player's turn and the hit objects will be coloured. The player can set a fixed combo colour at the match setup the [Tag Colour](#tag-颜色) section in the match lobby.
+绿色箭头会指示目前正在游玩的玩家，屏幕右下角会显示其名字。警告箭头会指出玩家负责的连击组将至的时机，此时连击组中的打击物件会有颜色。玩家可以在比赛配置页的 [Tag 颜色](#tag-颜色)区设置固定的连击组颜色。
 
 所有玩家都要旋转转盘，否则会导致断连。
 
@@ -373,7 +373,7 @@ A green arrow will show the player who is currently playing, and their name will
 
 所有玩家共用血条，血条完全清空时比赛结束。在 Tag-team VS 模式中，两支队伍有各自的血条，血量降到零时队伍则会失败。
 
-Players using the [Sudden Death (SD)](/wiki/Gameplay/Game_modifier/Sudden_Death) game modifier will cause the whole match to end if they fail due to it, even in Tag-team VS. If [Easy (EZ)](/wiki/Gameplay/Game_modifier/Easy) is used, players can still get two extra lives. However, in Tag-team VS, when a team's health drops to zero, even though the [health bar](/wiki/Client/Interface/Health_bar) will be refilled, the match will judge them as *failed* and end immediately.
+如果使用 [Sudden Death (SD)](/wiki/Gameplay/Game_modifier/Sudden_Death) 游戏模组的玩家失败，整场比赛就会结束，即便在 Tag-team VS 模式中也是如此。如果使用 [Easy (EZ)](/wiki/Gameplay/Game_modifier/Easy) 模组，玩家仍会拥有两条额外生命。在 Tag-team VS 模式中，当队伍的血条降到零时，[血条](/wiki/Client/Interface/Health_bar)会被重新填满，但比赛仍会将该队伍判定为*失败*并立刻结束。
 
 ##### 结果
 
@@ -385,11 +385,11 @@ Players using the [Sudden Death (SD)](/wiki/Gameplay/Game_modifier/Sudden_Death)
 ![](img/multi-tagteam-results.jpg "Tag-team VS 模式结算屏幕")
 :::
 
-No ranked score or performance points are awarded for `Tag co-op` or `Tag-team VS` matches.
+对于 `Tag co-op` 与 `Tag-team VS` 模式的比赛，玩家不会获得排名分数与表现分。
 
-For `Tag co-op`, the result shown is the total score, the [judgements](/wiki/Gameplay/Judgement) and accuracy of the team. Individual results are not shown, and can only be seen in the match history. The result screen only appears if the beatmap was cleared successfully, unlike other multiplayer modes.
+对于 `Tag co-op` 模式，结算屏幕中会显示总分、[判定情况](/wiki/Gameplay/Judgement)与准确率，而不会单独显示每位玩家的结果（仅在比赛记录中显示）。与其他游戏模式不同，只有成功完成了谱面，才会显示结算屏幕。
 
-The `Tag-team VS` results screen is identical to the [`Team VS` 的结算屏幕](#team-vs-results-screen), except that individual results can be seen under different tabs for each team.
+`Tag-team VS` 模式中的结算屏幕与 [`Team VS` 的](#team-vs-results-screen)相同。但在 `Team VS` 模式中，两支队伍的不同标签页下会单独显示所有玩家的结果。
 
 ## 冷知识
 
@@ -399,7 +399,7 @@ The `Tag-team VS` results screen is identical to the [`Team VS` 的结算屏幕]
 ![](img/legacy-multi-lobby.jpg "osu!mania 初次发布时（2012 年 10 月 8 日）的大厅截图，此时还无法在多人游戏中游玩")
 :::
 
-- The initial multiplayer version was implemented on June 3, 2008 in osu! Public Release b335.
-- Match setup used to allow only up to a total of 8 players.
-- osu!mania was shown as a "3" in the lobby for players that had not yet updated their client to the latest release patch (which enabled osu!mania with no ranking support).
-- No Video used to be the *only* game modifier allowed for players to use, but it was removed in favour of its placement in the [visual settings](/wiki/Client/Interface/Visual_settings).
+- 最早实现多人游戏的版本是 osu! Public Release b335，于 2008 年 6 月 3 日实现。
+- 比赛房间曾最多允许 8 位玩家进入。
+- 对于客户端还没有安装最新版补丁（可以在不计入排名的情况下多人游玩 osu!mania）的玩家，osu!mania 在大厅中会显示为 "3"。
+- 玩家过去*只*允许使用 No Video 游戏模组，后来被放在了[视觉设置](/wiki/Client/Interface/Visual_settings)中。
