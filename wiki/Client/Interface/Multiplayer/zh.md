@@ -170,7 +170,7 @@ needs_cleanup: true
 #### 模组
 
 ::: Infobox
-![](img/multi-player-free-mods-zh.jpg "多人游戏的模组选择页面，此时房主已启用 Free ods")
+![](img/multi-player-free-mods-zh.jpg "多人游戏的模组选择页面，此时房主已启用 Free Mods")
 :::
 
 此区域显示比赛使用的[游戏模组](/wiki/Gameplay/Game_modifier)。
