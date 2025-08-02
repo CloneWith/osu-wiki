@@ -1,7 +1,9 @@
 ---
 tags:
+  - 断尾
   - 断头
   - 断开头
+  - 失误
   - reverse choke
 ---
 
